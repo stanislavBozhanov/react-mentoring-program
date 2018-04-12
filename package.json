@@ -1,0 +1,29 @@
+{
+  "name": "react-mentoring",
+  "version": "1.0.0",
+  "description": "Random code connected with my react mentoring course and experimenting with react",
+  "private": true,
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "express": "^4.16.3",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode development",
+    "start" : "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.epam.com:Stanislav_Bozhanov/react-mentoring.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
