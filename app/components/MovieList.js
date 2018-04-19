@@ -7,7 +7,9 @@ export default class MovieList extends Component {
     return (
       <div>
         <ul>
+          { /*
           {this.props.movies.map((movie) => <Movie key={movie.name} movie={movie} />)}
+          */}
         </ul>
       </div>
     )

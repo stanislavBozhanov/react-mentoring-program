@@ -1,18 +1,20 @@
 import React, {Component} from 'react';
-import HelloWorldReactComponent from './HelloWorldReactComponent';
-import helloWorldCreateElement from './helloWorldCreateElement';
-import HelloWorldReactPureComponent from './HelloWorldReactPureComponent';
-import HelloWorldFunctionalComponent from './HelloWorldFunctionalComponent';
 import ErrorBoundary from './ErrorBoundary';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Dashboard from "./Dashboard";
+import MoviePage from "./MoviePage";
+import NotFound from "./NotFound";
+
 
 export default class App extends Component {
   render() {
     return (
       <ErrorBoundary>
-        <HelloWorldReactComponent/>
-        {helloWorldCreateElement}
-        <HelloWorldReactPureComponent/>
-        <HelloWorldFunctionalComponent/>
+        <Switch>
+          <Route exact path="/" component={Dashboard} />
+          <Route path="/movie/:movieName" component={MoviePage} />
+          <Route path="*" component={NotFound} />
+        </Switch>
       </ErrorBoundary>
     );
   }
