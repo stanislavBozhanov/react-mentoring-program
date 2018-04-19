@@ -12,8 +12,7 @@ export default class Dashboard extends Component {
         <SearchBar />
         <SortableResultBar/>
         <MovieList/>
-        <Footer/>
       </React.Fragment>
-    )
+    );
   }
 }

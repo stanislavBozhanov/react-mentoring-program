@@ -12,7 +12,6 @@ export default class MoviePage extends Component {
         <MovieInfo/>
         <SimilarMoviesResultBar/>
         <MovieList/>
-        <Footer/>
       </React.Fragment>
     );
   }

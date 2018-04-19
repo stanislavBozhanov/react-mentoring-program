@@ -7,7 +7,6 @@ export default class NotFound extends Component {
     return (
       <React.Fragment>
         <span>404 Not found</span>
-        <Footer/>
       </React.Fragment>
     );
   }
