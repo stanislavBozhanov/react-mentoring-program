@@ -26,7 +26,7 @@ module.exports = {
         loader: 'babel-loader',
         options: {
           plugins: ['transform-react-jsx'],
-          presets: ['env']
+          presets: ['env', 'stage-2']
         }
       }
     }]
