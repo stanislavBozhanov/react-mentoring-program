@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SearchBar from "./SearchBar";
 import SortableResultBar from "./SortableResultBar";
-import MovieList from "./MovieList";
+import MovieList from "./Movies/MovieList";
 
 
 export default class Dashboard extends Component {

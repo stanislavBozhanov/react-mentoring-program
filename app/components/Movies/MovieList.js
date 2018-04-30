@@ -7,7 +7,10 @@ export default class MovieList extends Component {
     return (
       <div>
         <ul>
-          {this.props.movies.map((movie) => <Movie key={movie.name} movie={movie} />)}
+          { this.props.movies ?
+            this.props.movies.map((movie) => <Movie key={movie.name} movie={movie} />) :
+            'No similar movies found.'
+          }
         </ul>
       </div>
     )

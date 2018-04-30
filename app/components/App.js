@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import ErrorBoundary from './ErrorBoundary';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Dashboard from "./Dashboard";
-import MoviePage from "./MoviePage";
+import MoviePage from "./Movies/MoviePage";
 import NotFound from "./NotFound";
 import Footer from "./Footer"
 
