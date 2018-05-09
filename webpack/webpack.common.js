@@ -6,7 +6,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   context: path.resolve(__dirname, '../app'),
 
-  entry: './index.js',
+  entry: [
+      'babel-polyfill',
+      './index.js'
+  ],
 
   output: {
     filename: 'bundle.js',
@@ -26,7 +29,7 @@ module.exports = {
         loader: 'babel-loader',
         options: {
           plugins: ['transform-react-jsx'],
-          presets: ['env', 'stage-2']
+          presets: ['env', 'stage-2', 'react']
         }
       }
     }]

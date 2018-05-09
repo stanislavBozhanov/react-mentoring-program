@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Footer component 1`] = `
+<footer>
+  <span />
+</footer>
+`;
+
+exports[`Renders MovieInfo component 1`] = `
+<div>
+  <div>
+    Title
+  </div>
+  <div>
+    Sub Title
+  </div>
+  <div>
+    Cover photo
+  </div>
+  <div>
+    Year and duration
+  </div>
+  <div>
+    Description
+  </div>
+</div>
+`;
+
+exports[`Renders MovieList component 1`] = `
+<div>
+  <ul>
+    No similar movies found.
+  </ul>
+</div>
+`;
+
+exports[`Renders MoviePage component 1`] = `
+Array [
+  <div>
+    <div>
+      Title
+    </div>
+    <div>
+      Sub Title
+    </div>
+    <div>
+      Cover photo
+    </div>
+    <div>
+      Year and duration
+    </div>
+    <div>
+      Description
+    </div>
+  </div>,
+  <div>
+    <span />
+  </div>,
+  <div>
+    <ul>
+      No similar movies found.
+    </ul>
+  </div>,
+]
+`;
+
+exports[`Renders ResultBar component 1`] = `<div />`;
+
+exports[`Renders SearchBar component 1`] = `
+<div
+  className="search-bar"
+>
+  <span />
+  <h2>
+    Find your movie
+  </h2>
+  <input
+    name="searchText"
+    type="text"
+  />
+  <div>
+    <span>
+      Search by
+    </span>
+    <button>
+      Title
+    </button>
+    <button>
+      Genre
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Search
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Renders SimilarMoviesResultBar component 1`] = `
+<div>
+  <span />
+</div>
+`;
+
+exports[`Renders SortableResultBar component 1`] = `
+<div>
+  <span />
+  <div>
+    <span>
+      Sort by
+    </span>
+    <button>
+      release date
+    </button>
+    <button>
+      rating
+    </button>
+  </div>
+</div>
+`;
