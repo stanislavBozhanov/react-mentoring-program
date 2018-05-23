@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactTestUtils from 'react-dom/test-utils';
 import TestRenderer from 'react-test-renderer';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16'
@@ -16,6 +17,14 @@ import MoviePage from "../components/Movies/MoviePage";
 // Setup Enzyme's react adapter
 Enzyme.configure({adapter: new Adapter()});
 
+beforeEach(() => {
+  jest.spyOn(console, 'error');
+  global.console.error.mockImplementation(() => {})
+});
+
+afterEach(() => {
+  global.console.error.mockRestore()
+});
 
 it('Renders Footer component', () => {
 
@@ -79,3 +88,9 @@ it('should change data', () => {
   console.log(component);
 });
 
+it('this should throw and pass and not log the error', () => {
+  expect(() => {
+    ReactTestUtils.renderIntoDocument(<DoSomething naughty/>)
+  })
+    .toThrow(/Bad developer!/)
+});
