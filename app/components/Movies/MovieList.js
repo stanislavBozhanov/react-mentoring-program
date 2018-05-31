@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Movie from "./Movie";
 
 
-export default class MovieList extends Component {
+class MovieList extends Component {
   render() {
     return (
       <div>
@@ -16,3 +17,11 @@ export default class MovieList extends Component {
     )
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    movies: state.movies
+  }
+}
+
+export default connect(mapStateToProps)(MovieList);
