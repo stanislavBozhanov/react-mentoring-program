@@ -1,16 +1,19 @@
 import fetch from 'cross-fetch';
 
-export function search(text) {
+export const searchMovies = (text) => ({
+  type: 'SEARCH_MOVIES',
+  text
+});
+
+export function setReleaseDateSortType() {
   return {
-    type: 'SEARCH',
-    text: text
+    type: 'SET_RELEASE_DATE_SORT_TYPE',
   }
 }
 
-export function setSortType(sortType) {
+export function setTitleSortType() {
   return {
-    type: 'SET_SORT_TYPE',
-    sortType: sortType
+    type: 'SET_TITLE_SORT_TYPE',
   }
 }
 

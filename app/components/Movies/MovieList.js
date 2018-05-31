@@ -9,7 +9,7 @@ class MovieList extends Component {
       <div>
         <ul>
           { this.props.movies ?
-            this.props.movies.map((movie) => <Movie key={movie.name} movie={movie} />) :
+            this.props.movies.map((movie) => <Movie key={movie.id} movie={movie} />) :
             'No similar movies found.'
           }
         </ul>
@@ -20,7 +20,7 @@ class MovieList extends Component {
 
 function mapStateToProps(state) {
   return {
-    movies: state.movies
+    movies: state.moviesFiltered
   }
 }
 

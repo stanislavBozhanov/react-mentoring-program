@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { search } from "../actions/actions";
+import { searchMovies } from "../actions/actions";
 
 
 class SearchBar extends Component {
@@ -17,17 +17,23 @@ class SearchBar extends Component {
           <span>Search by</span>
           <button>Title</button>
           <button>Genre</button>
-          <button onClick={() => this.props.search(this.searchText.current.value)}>Search</button>
+          <button onClick={() => this.props.searchMovies(this.searchText.current.value)}>Search</button>
         </div>
       </div>
     )
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapStateToProps = state => {
   return {
-    search
+    movies: state.movies
   }
 };
 
-export default connect(mapDispatchToProps)(SearchBar);
+const mapDispatchToProps = dispatch => {
+  return {
+    searchMovies: text => dispatch(searchMovies(text))
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);

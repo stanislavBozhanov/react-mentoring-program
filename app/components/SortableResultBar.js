@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {setSortType} from "../actions/actions";
+import {setReleaseDateSortType, setTitleSortType} from "../actions/actions";
 
 
 class SortableResultBar extends Component {
@@ -10,23 +10,24 @@ class SortableResultBar extends Component {
         <span>{this.props.sortText}</span>
         <div>
           <span>Sort by</span>
-          <button onClick={() => this.props.setSortType('release_date')}>release date</button>
-          <button onClick={() => this.props.setSortType('rating')}>rating</button>
+          <button onClick={() => this.props.setReleaseDateSortType()}>release date</button>
+          <button onClick={() => this.props.setTitleSortType()}>title</button>
         </div>
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     sortText: state.sortText
   }
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    setSortType
+    setReleaseDateSortType: () => dispatch(setReleaseDateSortType()),
+    setTitleSortType: () => dispatch(setTitleSortType())
   }
 };
 
