@@ -1,18 +1,33 @@
 import React, { Component } from 'react';
-import SimilarMoviesResultBar from "./SimilarMoviesResultBar";
+import { connect } from 'react-redux';
+import {setSortType} from "../actions/actions";
 
 
-export default class SortableResultBar extends Component {
+class SortableResultBar extends Component {
   render() {
     return (
       <div>
-        <span>{this.props.infoText}</span>
+        <span>{this.props.sortText}</span>
         <div>
           <span>Sort by</span>
-          <button>release date</button>
-          <button>rating</button>
+          <button onClick={() => this.props.setSortType('release_date')}>release date</button>
+          <button onClick={() => this.props.setSortType('rating')}>rating</button>
         </div>
       </div>
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    sortText: state.sortText
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setSortType
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SortableResultBar);
